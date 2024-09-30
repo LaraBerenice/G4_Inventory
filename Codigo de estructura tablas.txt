@@ -1,0 +1,107 @@
+1) CREATE TABLE Vendors (
+    VendorNumber INT PRIMARY KEY,
+    VendorName VARCHAR(255)
+);
+
+2) CREATE TABLE precios_compra (
+    Brand INT PRIMARY KEY,
+    Description VARCHAR(255),
+    Price DECIMAL(10, 2),
+    Size VARCHAR(50),
+    Volume INT,
+    Classification INT,
+    PurchasePrice DECIMAL(10, 2),
+    VendorNumber INT,
+    VendorName VARCHAR(255),
+    FOREIGN KEY (VendorNumber) REFERENCES Vendors(VendorNumber)
+);
+
+3)CREATE TABLE inventario_invierno (
+    InventoryId VARCHAR(50) PRIMARY KEY,
+    Store INT,
+    City VARCHAR(100),
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(50),
+    onHand INT,
+    Price DECIMAL(10, 2),
+    startDate DATE,
+    FOREIGN KEY (Brand) REFERENCES precios_compra (Brand)
+);
+
+4) CREATE TABLE inventario_fin_invierno (
+    InventoryId VARCHAR(50) PRIMARY KEY,
+    Store INT,
+    City VARCHAR(100),
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(50),
+    onHand INT,
+    Price DECIMAL(10, 2),
+    endDate DATE,
+    FOREIGN KEY (Brand) REFERENCES precios_compra (Brand)
+);
+
+5) CREATE TABLE compras_finales (
+    InventoryId VARCHAR(50) PRIMARY KEY,
+    Store INT,
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(50),
+    VendorNumber INT,
+    VendorName VARCHAR(255),
+    PONumber INT,
+    PODate DATE,
+    ReceivingDate DATE,
+    InvoiceDate DATE,
+    PayDate DATE,
+    PurchasePrice DECIMAL(10, 2),
+    Quantity INT,
+    Dollars DECIMAL(10, 2),
+    Classification INT
+    FOREIGN KEY (InventoryId) REFERENCES Inventory(InventoryId),
+    FOREIGN KEY (Brand) REFERENCES Products(Brand),
+    FOREIGN KEY(VendorNumber) REFERENCES Vendor(VendorNumber)
+);
+
+6) CREATE TABLE ventas_finales (
+    InventoryId VARCHAR(50),
+    Store INT,
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(50),
+    SalesQuantity INT,
+    SalesDollars DECIMAL(10, 2),
+    SalesPrice DECIMAL(10, 2),
+    SalesDate DATE,
+    Volume INT,
+    Classification INT,
+    ExciseTax DECIMAL(10, 2),
+    VendorNo INT,
+    VendorName VARCHAR(255)
+    PRIMARY KEY (InventoryId, SalesDate),
+    FOREIGN KEY (Brand) REFERENCES Products(Brand),
+    FOREIGN LEY (VendorNo) REFERENCES Vendors(VendorNumber)
+);
+
+7) CREATE TABLE factura_de_compras (
+    VendorNumber INT,
+    VendorName VARCHAR(255),
+    InvoiceDate DATE,
+    PONumber INT,
+    PODate DATE,
+    PayDate DATE,
+    Quantity INT,
+    Dollars DECIMAL(15, 2),
+    Freight DECIMAL(10, 2),
+    Approval VARCHAR(255) NULL,
+    PRIMARY KEY (VendorNumber, InvoiceDate),
+    FOREIGN KEY (PONumber) REFERENCES PurchaseOrders(PONumber),
+    FOREIGN KEY (VendorNumber) REFERENCES Vendors(VendorNumber)
+);
+
+
+
+/* Hay que agregar la PK y FK una vez que determinamos las relaciones
+
+
