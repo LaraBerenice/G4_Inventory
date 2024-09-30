@@ -1,10 +1,10 @@
--- ambia al contexto de la base de datos Lara
+-- cambia al contexto de la base de datos Lara
 USE Lara;
 
--- Crea un inicio de sesión para el usuario 'lara' con una contraseña
-CREATE LOGIN lara WITH PASSWORD = '230723' -- úrate de poner una contraseña válida
+-- Crea un inicio de sesiï¿½n para el usuario 'lara' con una contraseï¿½a
+CREATE LOGIN lara WITH PASSWORD = '230723' -- ï¿½rate de poner una contraseï¿½a vï¿½lida
 
--- Crea un usuario en la base de datos 'Lara' asociado al inicio de sesión 'lara'
+-- Crea un usuario en la base de datos 'Lara' asociado al inicio de sesiï¿½n 'lara'
 CREATE USER lara FOR LOGIN lara;
 
 -- Asigna el rol de db_owner al usuario 'lara' para otorgar todos los permisos
