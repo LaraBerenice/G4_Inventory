@@ -1,5 +1,4 @@
-CREATE DATABASE brindis_real
-
+USE brindis_real
 
   BULK INSERT precios_compra
 FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\2017PurchasePricesDeclimpio.csv'
