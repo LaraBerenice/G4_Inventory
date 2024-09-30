@@ -1,0 +1,45 @@
+CREATE DATABASE brindis_real
+
+
+  BULK INSERT precios_compra
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\2017PurchasePricesDeclimpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+ BULK INSERT inventario_invierno
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\BegInvFINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+ BULK INSERT inventario_fin_invierno
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\EndInvFINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+ BULK INSERT factura_de_compras
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\InvoicePurchases12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+BULK INSERT compras_finales
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\Purchases_FINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+BULK INSERT ventas_finales
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\SalesFINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
