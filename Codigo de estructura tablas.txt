@@ -65,7 +65,8 @@
 );
 
 6) CREATE TABLE ventas_finales (
-    InventoryId VARCHAR(50) PRIMARY KEY,
+    IdSales INT PRIMARY KEY IDENTITY(1,1),
+    InventoryId VARCHAR(50) ,
     Store INT,
     Brand INT,
     Description VARCHAR(255),
@@ -95,5 +96,6 @@
     Approval VARCHAR(255) NULL,
     FOREIGN KEY (VendorNumber) REFERENCES Vendors(VendorNumber)
 );
+
 
 
