@@ -3,3 +3,9 @@ Entorno_proyect_final/
 SQLQuery3.sql
 codigo copy.ipynb
 .env
+.venv/
+venv/
+*.venv/
+.PF_G4_cg_venv/
+limpieza_datos.ipynb
+requirements.text
