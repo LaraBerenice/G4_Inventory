@@ -1,4 +1,4 @@
-USE brindis_real
+USE lara
 
   BULK INSERT precios_compra
 FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\2017PurchasePricesDeclimpio.csv'
