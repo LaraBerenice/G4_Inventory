@@ -1,4 +1,4 @@
-1) CREATE TABLE Vendors (
+CREATE TABLE Vendors (
     VendorNumber INT PRIMARY KEY,
     VendorName VARCHAR(255)
 );
@@ -17,7 +17,7 @@
     FOREIGN KEY (VendorNumber) REFERENCES Vendors(VendorNumber)
 );
 
-3)CREATE TABLE inventario_invierno (
+CREATE TABLE inventario_invierno (
     InventoryId VARCHAR(50) PRIMARY KEY,
     Store INT,
     City VARCHAR(100),
@@ -83,7 +83,7 @@
     FOREIGN KEY (VendorNo) REFERENCES Vendors(VendorNumber)
 );
 
-7) CREATE TABLE factura_de_compras (
+CREATE TABLE factura_de_compras (
     VendorNumber INT,
     VendorName VARCHAR(255),
     InvoiceDate DATE,
