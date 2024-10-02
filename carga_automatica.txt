@@ -1,0 +1,151 @@
+----INSERCIÓN DE DATOS EN LAS TABLAS--------
+1)  BULK INSERT Vendors
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\vendedores.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+
+ 2) BULK INSERT precios_compra
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\2017PurchasePricesDeclimpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+
+
+3) BULK INSERT inventario_invierno
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\BegInvFINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+--------------------------------------------------------------------------------------------------------------------------------------
+#Estas tablas tienen una columna creada con identity, la cual no esta creada en el csv, por lo que primero hay que crear una tabla temporal, para luego insertarla en la permanente 
+
+4) CREATE TABLE #temp_inventario_fin_invierno (
+    InventoryId VARCHAR(50),
+    Store INT,
+    City VARCHAR(100),
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(50),
+    onHand INT,
+    Price DECIMAL(10, 2),
+    endDate DATE
+);
+BULK INSERT #temp_inventario_fin_invierno
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\EndInvFINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    CODEPAGE = '65001' -- Solo si el archivo está en UTF-8
+);
+INSERT INTO inventario_fin_invierno
+    (InventoryId, Store, City, Brand, Description, Size, onHand, Price, endDate)
+SELECT 
+    InventoryId, Store, City, Brand, Description, Size, onHand, Price, endDate
+FROM #temp_inventario_fin_invierno;
+
+#ALTER TABLE inventario_fin_invierno
+#DROP CONSTRAINT FK__inventari__Inven__68487DD7;
+
+DROP TABLE #temp_inventario_fin_invierno;
+
+
+
+5) BULK INSERT factura_de_compras
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\InvoicePurchases12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                        ACA EMPIEZAN LOS PROBLEMAS
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6) CREATE TABLE #temp_compras_finales (
+    InventoryId VARCHAR(50) ,
+    Store INT,
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(50),
+    VendorNumber INT,
+    VendorName VARCHAR(255),
+    PONumber BIGINT,
+    PODate DATE,
+    ReceivingDate DATE,
+    InvoiceDate DATE,
+    PayDate DATE,
+    PurchasePrice DECIMAL(10, 2),
+    Quantity INT,
+    Dollars DECIMAL(10, 2),
+    Classification INT
+);
+BULK INSERT #temp_compras_finales
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\PurchasesFINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+
+INSERT INTO compras_finales
+    (InventoryId,Store,Brand, Description, Size,VendorNumber,VendorName,PONumber,PODate,ReceivingDate,InvoiceDate,PayDate,PurchasePrice,Quantity,Dollars ,Classification )
+SELECT 
+    InventoryId,Store,Brand, Description, Size,VendorNumber,VendorName,PONumber,PODate,ReceivingDate,InvoiceDate,PayDate,PurchasePrice,Quantity,Dollars ,Classification 
+FROM #temp_compras_finales;
+
+SELECT TOP(10)*FROM compras_finales;
+
+DROP TABLE #temp_compras_finales;
+BULK INSERT ventas_finales
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\SalesFINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+
+7)CREATE TABLE #temp_ventas_finales (
+    VendorNumber INT,
+    VendorName VARCHAR(255),
+    InvoiceDate DATE,
+    PONumber BIGINT PRIMARY KEY,
+    PODate DATE,
+    PayDate DATE,
+    Quantity INT,
+    Dollars DECIMAL(15, 2),
+    Freight DECIMAL(10, 2),
+    Approval VARCHAR(255) NULL,
+);
+BULK INSERT #temp_ventas_finales
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\SalesFINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+
+INSERT INTO ventas_finales
+    (VendorNumer,VendorName,InvoiceDate,PONumber,PODate,PayDate,Quantity,Dollars,Freight,Approval )
+SELECT 
+    VendorNumer,VendorName,InvoiceDate,PONumber,PODate,PayDate,Quantity,Dollars,Freight,Approval
+FROM #temp_ventas_finales;
+
+DROP TABLE #temp_ventas_finales;
+BULK INSERT ventas_finales
+FROM 'C:\Users\Work\Downloads\Henry Ori\G4_Inventory\SalesFINAL12312016_limpio.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+);
+
