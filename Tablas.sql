@@ -2,7 +2,7 @@
 CREATE DATABASE InventarioDB;
 GO
 
--- Usar la base de datos recién creada
+-- Usar la base de datos reciï¿½n creada
 USE InventarioDB;
 GO
 
@@ -15,10 +15,10 @@ CREATE TABLE Vendors (
 GO
 
 -- Crear tabla precios_compra
---Añadir el tipo de dato INT a RowPurchasesID.
+--Aï¿½adir el tipo de dato INT a RowPurchasesID.
 CREATE TABLE precios_compra (
     RowPurchasesID INT PRIMARY KEY IDENTITY(1,1),
-    Brand INT,
+    Brand Varchar(225),
     Description VARCHAR(255),
     Price DECIMAL(10, 2),
     Size VARCHAR(50),
