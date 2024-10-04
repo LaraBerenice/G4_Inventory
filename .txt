@@ -1,0 +1,96 @@
+# Definir las consultas SQL para crear las tablas
+create_precios_compra_dic = '''
+CREATE TABLE precios_compra_dic (
+    Brand INT,
+    Description VARCHAR(255),
+    Price FLOAT,
+    Size VARCHAR(255),
+    volume INT,
+    Classification INT,
+    PurchasePrice FLOAT,
+    VendorNumber INT,
+    VendorName VARCHAR(255)
+);
+'''
+
+create_inicio_inv_final = '''
+CREATE TABLE Inicio_Inv_FINAL (
+    InventoryId VARCHAR(255),
+    Store INT,
+    City VARCHAR(255),
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(255),
+    onHand INT,
+    Price FLOAT,
+    startDate DATE
+);
+'''
+
+create_final_inv_final = '''
+CREATE TABLE final_inv_Final (
+    InventoryId VARCHAR(255),
+    Store INT,
+    City VARCHAR(255),
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(255),
+    onHand INT,
+    Price FLOAT,
+    endDate DATE
+);
+'''
+
+create_factura_compras = '''
+CREATE TABLE Factura_Compras (
+    VendorNumber INT,
+    VendorName VARCHAR(255),
+    InvoiceDate DATE,
+    PONumber INT,
+    PODate DATE,
+    PayDate DATE,
+    Quantity INT,
+    Dollars FLOAT,
+    Freight FLOAT,
+    Approval FLOAT
+);
+'''
+
+create_compras_finales = '''
+CREATE TABLE Compras_Finales (
+    InventoryId VARCHAR(255),
+    Store INT,
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(255),
+    VendorNumber INT,
+    VendorName VARCHAR(255),
+    PONumber INT,
+    PODate DATE,
+    ReceivingDate DATE,
+    InvoiceDate DATE,
+    PayDate DATE,
+    PurchasePrice FLOAT,
+    Quantity INT,
+    Dollars FLOAT,
+    Classification INT
+);
+'''
+
+create_ventas_final = '''
+CREATE TABLE Ventas_Final (
+    InventoryId VARCHAR(255),
+    Store INT,
+    Brand INT,
+    Description VARCHAR(255),
+    Size VARCHAR(255),
+    SalesQuantity INT,
+    SalesDollars FLOAT,
+    SalesPrice FLOAT,
+    SalesDate DATE,
+    Volume INT,
+    Classification INT,
+    ExciseTax FLOAT,
+    VendorNo INT,
+    VendorName VARCHAR(255)
+);
