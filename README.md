@@ -5,11 +5,9 @@ Integrantes:
 - Sánchez Joaquin (Data Analyst)
 - Tica Oriana (Data Analyst)
 - Guerra Cecilia (Data Analyst)
-
-                        
-   ![Banner](https:////raw.githubusercontent.com/LaraBerenice/G4_Inventory/main/Brindis%20real.jpg)
-
-
+  
+                       
+   ![Banner](https://raw.githubusercontent.com/LaraBerenice/G4_Inventory/main/Brindis%20real.jpg)
 
   ## Contexto 
  Este proyecto propone una serie de mejoras en la gestión de Inventario, compras y ventas de la empresa minorista Brindis Real, distribuidora de bebidas alcoholicas.
