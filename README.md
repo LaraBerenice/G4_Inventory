@@ -6,12 +6,15 @@ Integrantes:
 - Tica Oriana (Data Analyst)
 - Guerra Cecilia (Data Analyst)
 
+                                           ![th](https://github.com/user-attachments/assets/9a158c59-a6e8-4090-8775-a888b42b7f41)
+
+
   ## Contexto 
  Este proyecto propone una serie de mejoras en la gestión de Inventario, compras y ventas de la empresa minorista Brindis Real, distribuidora de bebidas alcoholicas.
 
 Es útil porque fomenta una eficiente gestión de inventario que evite sobre costos, rotura de stock y optimice la atención de la demanda y por consiguiente las ganancias por ventas. Además de fomentar el trabajo colaborativo en GitHub.
 
- ## Tecnologías usadas
+  ## Tecnologías usadas
 - Python
 - Pandas:Limpieza y normalizacion de datos.
 - NumPy: Limpieza y normalizacion de datos. 
@@ -22,7 +25,10 @@ Es útil porque fomenta una eficiente gestión de inventario que evite sobre cos
 - LucidChart: Para creación del Modelo Relacional.
 - ClickUp: Para gestion de tareas del proyecto y creacion del Diagrama de Gantt.
 
- ## Flujo de Trabajo:
+  ## Datos usados:
+  -https://www.kaggle.com/datasets/bhanupratapbiswas/inventory-analysis-case-study/data?select=InvoicePurchases12312016.csv
+
+  ## Flujo de Trabajo:
 1ro - Creación de repositorio en Github.
 2do - Análisis y preparación de la data.
 3ro - Creación de Modelo Relacional.
