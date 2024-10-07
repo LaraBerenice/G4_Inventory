@@ -7,7 +7,7 @@ Integrantes:
 - Guerra Cecilia (Data Analyst)
 
                         
- ![Banner](https:////raw.githubusercontent.com/LaraBerenice/G4_Inventory/blob/Rama_Ori/Banner_bebidas.jpeg)
+ ![Banner](https:////raw.githubusercontent.com/LaraBerenice/G4_Inventory/blob/main/Brindis%20real.jpg)
 
 
 
