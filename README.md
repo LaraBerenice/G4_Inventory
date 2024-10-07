@@ -6,7 +6,7 @@ Integrantes:
 - Tica Oriana (Data Analyst)
 - Guerra Cecilia (Data Analyst)
 
-                                           ![th](https://github.com/user-attachments/assets/9a158c59-a6e8-4090-8775-a888b42b7f41)
+                                         
 
 
   ## Contexto 
