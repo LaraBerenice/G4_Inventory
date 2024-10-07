@@ -1,4 +1,4 @@
-# Proyecto Final de Bootcamp Henry:Optimización de la  Gestión de Inventario de Brindis Real Distributor Company
+# Proyecto Final de Bootcamp Henry: Optimización de la  Gestión de Inventario de Brindis Real Distributor Company
 
 Integrantes:
 - Ledesma Lara Berenice (Project Manager)
@@ -11,7 +11,7 @@ Integrantes:
 
 Es útil porque fomenta una eficiente gestión de inventario que evite sobre costos, rotura de stock y optimice la atención de la demanda y por consiguiente las ganancias por ventas. Además de fomentar el trabajo colaborativo en GitHub.
 
-## Tecnologías usadas
+ ## Tecnologías usadas
 - Python
 - Pandas:Limpieza y normalizacion de datos.
 - NumPy: Limpieza y normalizacion de datos. 
@@ -22,7 +22,7 @@ Es útil porque fomenta una eficiente gestión de inventario que evite sobre cos
 - LucidChart: Para creación del Modelo Relacional.
 - ClickUp: Para gestion de tareas del proyecto y creacion del Diagrama de Gantt.
 
-## Flujo de Trabajo:
+ ## Flujo de Trabajo:
 1ro - Creación de repositorio en Github.
 2do - Análisis y preparación de la data.
 3ro - Creación de Modelo Relacional.
