@@ -4,8 +4,11 @@ Integrantes:
 - Sánchez Joaquin (Data Analyst)
 - Tica Oriana (Data Analyst)
 - Guerra Cecilia (Data Analyst)
+  
 ¿Qué hace el proyecto?: Este proyecto propone una serie de mejoras en la gestión de Inventario, compras y ventas de la empresa minorista Brindis Real, distribuidora de bebidas alcoholicas.
+
 ¿Por qué el proyecto es útil?: Es útil porque fomenta una eficiente gestión de inventario que evite sobre costos, rotura de stock y optimice la atención de la demanda y por consiguiente las ganancias por ventas. Además de fomentar el trabajo colaborativo en GitHub.
+
 Flujo de Trabajo:
 1ro - Creación de repositorio en Github
 2do - Análisis y preparación de la data
