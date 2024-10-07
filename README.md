@@ -6,7 +6,9 @@ Integrantes:
 - Tica Oriana (Data Analyst)
 - Guerra Cecilia (Data Analyst)
 
-                         
+                        
+ ![Banner](https:////raw.githubusercontent.com/LaraBerenice/G4_Inventory/blob/Rama_Ori/Banner_bebidas.jpeg)
+
 
 
   ## Contexto 
