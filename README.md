@@ -6,7 +6,7 @@ Integrantes:
 - Tica Oriana (Data Analyst)
 - Guerra Cecilia (Data Analyst)
 
-             https://raw.githubusercontent.com/LaraBerenice/G4_Inventory/blob/Rama_Ori/th.jpeg                
+                          
 
 
   ## Contexto 
