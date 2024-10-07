@@ -21,6 +21,5 @@ Stack Elegido: Se usaron las siguientes herramientas y software para este primer
 - Git y GitHub para creación y armado del repositorio.
 - Lenguaje de programación Python dentro del editor Visual Studio Code y notebook Jupyer, con librerías pandas para análisis y limpieza de la data.
 - SQL Server, para la creacion y carga de la BD
-- ClickUp para gestión de tareas del proyecto
+- ClickUp para gestión de tareas del proyecto y Diagrama de Gantt
 - LucidChart para creación del Modelo Relacional
-- xxxx para la creación del diagrama de Gant
