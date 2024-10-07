@@ -97,5 +97,5 @@ CREATE TABLE factura_de_compras (
     FOREIGN KEY (VendorNumber) REFERENCES Vendors(VendorNumber)
 );
 
-
+..............
 
