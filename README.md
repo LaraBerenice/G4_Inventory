@@ -6,7 +6,7 @@ Integrantes:
 - Tica Oriana (Data Analyst)
 - Guerra Cecilia (Data Analyst)
 
-                          
+                         
 
 
   ## Contexto 
