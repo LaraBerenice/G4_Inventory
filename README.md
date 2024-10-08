@@ -29,11 +29,11 @@ Es útil porque fomenta una eficiente gestión de inventario que evite sobre cos
   -https://www.kaggle.com/datasets/bhanupratapbiswas/inventory-analysis-case-study/data?select=InvoicePurchases12312016.csv
 
   ## Flujo de Trabajo:
-1ro - Creación de repositorio en Github y agregado de colaboradores.
-2do - Análisis y preparación de la data en Python.
-3ro - Creación de Modelo Relacional, en plataforma online para mantenerlo colaborativo.
-4to - Creación la base de datos local.
-5to - Configuración de la  base de dato remota.
-6to - Acceso remoto a la base de datos,verificación del acceso de cada uno de los integrantes.
-7to - Carga de la base de datos y verificación de su correcto funcionamiento con querys simples.
-8vo- Optimización de la carga de datos, por medio de Job en SQL Agent.
+- 1ro: Creación de repositorio en Github y agregado de colaboradores.
+- 2do: Análisis y preparación de la data en Python.
+- 3ro: Creación de Modelo Relacional, en plataforma online para mantenerlo colaborativo.
+- 4to: Creación la base de datos local.
+- 5to: Configuración de la  base de dato remota.
+- 6to: Acceso remoto a la base de datos,verificación del acceso de cada uno de los integrantes.
+- 7to: Carga de la base de datos y verificación de su correcto funcionamiento con querys simples.
+- 8vo: Optimización de la carga de datos, por medio de Job en SQL Agent.
