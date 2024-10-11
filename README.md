@@ -6,13 +6,14 @@ Integrantes:
 - Tica Oriana (Data Analyst)
 - Guerra Cecilia (Data Analyst)
 
-                     
-   ![Banner](https://raw.githubusercontent.com/LaraBerenice/G4_Inventory/main/Brindis%20real.jpg)
+
+ ![Banner](https://raw.githubusercontent.com/LaraBerenice/G4_Inventory/main/IMAGENES/Brindis%20real.jpg)
+
 
   ## Contexto 
  Este proyecto propone una serie de mejoras en la gestión de Inventario, compras y ventas de la empresa minorista Brindis Real, distribuidora de bebidas alcoholicas.
 
-Es útil porque fomenta una eficiente gestión de inventario que evite sobre costos, rotura de stock y optimice la atención de la demanda y por consiguiente las ganancias por ventas. Además de fomentar el trabajo colaborativo en GitHub.
+Es útil porque fomenta una eficiente gestión de inventario que evite sobre costos, rotura de stock y optimice la atención de la demanda y por consiguiente las ganancias en las ventas. Además de fomentar el trabajo colaborativo en GitHub.
 
 Para su abordaje nos enfocamos en 3 problemas: 
 
