@@ -5,8 +5,8 @@ Integrantes:
 - Sánchez Joaquin (Data Analyst)
 - Tica Oriana (Data Analyst)
 - Guerra Cecilia (Data Analyst)
-  
-                       
+
+                     
    ![Banner](https://raw.githubusercontent.com/LaraBerenice/G4_Inventory/main/Brindis%20real.jpg)
 
   ## Contexto 
