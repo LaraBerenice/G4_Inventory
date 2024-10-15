@@ -1,0 +1,73 @@
+Fact_InvInicioYear
+InventoryId            object
+Store                   int64
+City                   object
+onHand                  int64
+startDate      datetime64[ns]
+ProductoID              int64
+
+
+Fact_InvInicioYear
+InventoryId            object
+Store                   int64
+City                   object
+onHand                  int64
+endDate        datetime64[ns]
+ProductoID              int64
+
+Fact_Ventas
+InventoryId              object
+Store                     int64
+SalesQuantity             int64
+SalesDollars            float64
+SalesPrice              float64
+SalesDate        datetime64[ns]
+ExciseTax               float64
+ProductoID                int64
+dtype: object
+
+
+Fact_Compras
+InventoryId              object
+Store                     int64
+ReceivingDate    datetime64[ns]
+Quantity                  int64
+Dollars                 float64
+OrdenCompraID             int64
+ProductoID                int64
+dtype: object
+
+
+Dim_OC
+InvoiceDate      datetime64[ns]
+PONumber                  int64
+PODate           datetime64[ns]
+PayDate          datetime64[ns]
+Quantity                  int64
+Dollars                 float64
+Freight                 float64
+OrdenCompraID             int64
+VendorNumber              int64
+VendorName               object
+dtype: object
+
+
+Dim_Producto
+Brand               int64
+Description        object
+Price             float64
+Size               object
+Volume            float64
+Classification      int64
+PurchasePrice     float64
+VendorID            int64
+ProductoID          int64
+dtype: object
+
+
+Dim_Vendor
+VendorNumber     int64
+VendorName      object
+VendorID         int64
+dtype: object
+
