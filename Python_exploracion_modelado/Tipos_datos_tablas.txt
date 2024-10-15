@@ -1,0 +1,73 @@
+Fact_InvInicioYear
+InvInicioYearID (PK)      int
+InventoryId               str
+Store                   int64
+City                      str
+onHand                  int64
+startDate          datetime64
+ProductoID (FK)         int64
+
+
+Fact_InvFinYear
+InvFinYearID (PK)   	  int
+InventoryId               str
+Store                   int64
+City                      str
+onHand                  int64
+endDate            datetime64
+ProductoID (FK)         int64
+
+
+Dim_Vendor
+VendorNumber    	int64
+VendorName         	  str
+VendorID (PK)        	int64
+
+
+Dim_OC
+InvoiceDate          datetime64
+PONumber                  int64
+PODate               datetime64
+PayDate              datetime64
+Quantity                  int64
+Dollars                 float64
+Freight                 float64
+OrdenCompraID (PK)        int64
+VendorNumber              int64
+VendorName                  str
+
+
+Dim_Producto
+Brand         	    	  int64
+Description	      	    str
+Price		        float64
+Size                  	    str
+Volume           	float64
+Classification      	  int64
+PurchasePrice     	float64
+VendorID (FK)       	  int64
+ProductoID (PK)     	  int64
+
+
+Fact_Ventas
+VentasID (PK)		  int64
+InventoryId                 str
+Store                     int64
+SalesQuantity             int64
+SalesDollars            float64
+SalesPrice              float64
+SalesDate            datetime64
+ExciseTax               float64
+ProductoID (FK)           int64
+
+
+Fact_Compras
+ComprasID (PK)		  int64
+InventoryId      	    str
+Store                     int64
+ReceivingDate        datetime64
+Quantity                  int64
+Dollars                 float64
+OrdenCompraID (FK)        int64
+ProductoID (FK)           int64
+
